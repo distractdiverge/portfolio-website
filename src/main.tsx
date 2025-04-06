@@ -40,7 +40,17 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>,
+  <div className="bg-gray-300">
+    <div className="grid grid-cols-10 gap-4">
+      <div className="col-span-10 bg-red-300">Header</div>
+      <div className="col-span-1 bg-red-700"></div>
+      <div className="col-span-8 min-h-[500px] bg-green-300">
+        <React.StrictMode>
+          <RouterProvider router={router} />
+        </React.StrictMode>
+      </div>
+      <div className="col-span-1 bg-blue-700"></div>
+      <div className="col-span-10 bg-blue-300">Header</div>
+    </div>
+  </div>,
 );
