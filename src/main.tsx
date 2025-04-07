@@ -16,13 +16,13 @@ import { Routes, Route, BrowserRouter } from 'react-router-dom';
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <BrowserRouter>
-      <div className="bg-gray-300">
-        <div className="grid grid-cols-10 gap-4">
+      <div className="">
+        <div className="grid grid-cols-10 gap-0 md:gap-1">
           <div className="col-span-10">
               <HeaderComponent />
             </div>
-          <div className="col-span-1 bg-red-700">&nbsp;</div>
-          <div className="col-span-8 min-h-[500px] bg-green-300">
+          <div className="hidden md:block md:col-span-1 bg-gray-700">&nbsp;</div>
+          <div className="col-span-10 md:col-span-8 min-h-[500px] bg-white p-4">
             <Routes>
                 <Route path="/"           element={<App/>}          errorElement={<ErrorPage />} />
                 <Route path="/projects"   element={<Projects />}    errorElement={<ErrorPage />}/>
@@ -33,7 +33,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
               </Routes>
             
           </div>
-          <div className="col-span-1 bg-blue-700"></div>
+          <div className="hidden md:block md:col-span-1 bg-gray-700"></div>
           <div className="col-span-10">
             <FooterComponent />
           </div>

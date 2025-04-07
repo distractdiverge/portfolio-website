@@ -2,9 +2,9 @@ import React from 'react';
 
 const FooterComponent : React.FC = () => {
     return (
-        <div id="footer" className="bg-white">
-            
-        </div>
+        <footer className="bg-white p-4">
+            <h2 className="p-2">Rainbow Fern</h2>
+        </footer>
     );
 };
 
