@@ -16,12 +16,12 @@ import { Routes, Route, BrowserRouter } from 'react-router-dom';
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <BrowserRouter>
-      <div className="grid grid-cols-10 gap-0 lg:gap-1 justify-stretch align-stretch min-h-screen grid-rows-[48px_auto_72px] md:grid-rows-[72px_auto_72px]">
-          <div className="col-span-10">
+      <div className="grid grid-cols-12 gap-0 justify-stretch align-stretch min-h-screen grid-rows-[48px_auto_72px] md:grid-rows-[72px_auto_72px]">
+          <div className="col-span-12">
               <HeaderComponent />
             </div>
-          <div className="hidden lg:block lg:col-span-1 bg-gray-700">&nbsp;</div>
-          <div className="col-span-10 lg:col-span-8 h-auto bg-white p-4">
+          <div className="hidden lg:block lg:col-span-2">&nbsp;</div>
+          <div className="col-span-12 lg:col-span-8 bg-amber-400 p-2 lg:p-4">
             <Routes>
                 <Route path="/"           element={<App/>}          errorElement={<ErrorPage />} />
                 <Route path="/projects"   element={<Projects />}    errorElement={<ErrorPage />}/>
@@ -32,8 +32,8 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
               </Routes>
             
           </div>
-          <div className="hidden lg:block lg:col-span-1 bg-gray-700"></div>
-          <div className="col-span-10">
+          <div className="hidden lg:block lg:col-span-2"></div>
+          <div className="col-span-12">
             <FooterComponent />
           </div>
       </div>
