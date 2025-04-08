@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './routes/App.tsx';
+import About from './routes/About.tsx';
 import Contact from './routes/Contact.tsx';
 import Education from './routes/Education.tsx';
 import Experience from './routes/Experience.tsx';
@@ -23,7 +23,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
           <div className="hidden lg:block lg:col-span-2">&nbsp;</div>
           <div className="col-span-12 lg:col-span-8 bg-amber-400 p-2 lg:p-4">
             <Routes>
-                <Route path="/"           element={<App/>}          errorElement={<ErrorPage />} />
+                <Route path="/"           element={<About />}          errorElement={<ErrorPage />} />
                 <Route path="/projects"   element={<Projects />}    errorElement={<ErrorPage />}/>
                 <Route path="/skills"     element={<Skills />}      errorElement={<ErrorPage />}/>
                 <Route path="/education"  element={<Education />}   errorElement={<ErrorPage />}/>

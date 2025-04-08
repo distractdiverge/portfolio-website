@@ -12,7 +12,7 @@ const HeaderComponent : React.FC = () => {
         <header className="bg-white flex justify-between p-1 md:p-4">
             <div className="flex">
                 <a href="/#" className="block">
-                    <img src={rainbowFernLogo} alt="Rainbowfern logo" className="block max-w-[32px] max-h-[32px]"/>
+                    <img src={rainbowFernLogo} alt="Rainbowfern logo" className="block mt-2 ml-1 md:mt-0 md:ml-0 max-w-[20px] max-h-[20px] md:max-w-[32px] md:max-h-[32px]"/>
                 </a>
                 <h1 className="block p-2 text-s md:text-base">
                     Rainbowfern.com
