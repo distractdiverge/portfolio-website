@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from "react-router";
+import rainbowFernLogo from '../assets/fern-colors-web.svg';
 
 const HeaderComponent : React.FC = () => {
 
@@ -9,7 +10,14 @@ const HeaderComponent : React.FC = () => {
 
     return (
         <header className="bg-white flex justify-between p-1 md:p-4">
-            <h1 className="block p-2 text-s md:text-base">Rainbowfern.com</h1>
+            <div className="flex">
+                <a href="/#" className="block">
+                    <img src={rainbowFernLogo} alt="Rainbowfern logo" className="block max-w-[32px] max-h-[32px]"/>
+                </a>
+                <h1 className="block p-2 text-s md:text-base">
+                    Rainbowfern.com
+                </h1>
+            </div>
             <div className="flex">
                 <NavLink className={linkClassname}   to="/skills">Skills</NavLink>
                 <NavLink className={linkClassname}   to="/projects">Projects</NavLink>
