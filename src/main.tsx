@@ -20,10 +20,10 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
           <div className="col-span-12">
               <HeaderComponent />
             </div>
-          <div className="hidden lg:block lg:col-span-2">&nbsp;</div>
-          <div className="col-span-12 lg:col-span-8 bg-amber-400 p-2 lg:p-4">
+          <div className="hidden md:block md:col-span-1">&nbsp;</div>
+          <div className="col-span-12 md:col-span-10 p-2 lg:p-4">
             <Routes>
-                <Route path="/"           element={<About />}          errorElement={<ErrorPage />} />
+                <Route path="/"           element={<About />}       errorElement={<ErrorPage />} />
                 <Route path="/projects"   element={<Projects />}    errorElement={<ErrorPage />}/>
                 <Route path="/skills"     element={<Skills />}      errorElement={<ErrorPage />}/>
                 <Route path="/education"  element={<Education />}   errorElement={<ErrorPage />}/>
@@ -32,7 +32,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
               </Routes>
             
           </div>
-          <div className="hidden lg:block lg:col-span-2"></div>
+          <div className="hidden md:block md:col-span-1"></div>
           <div className="col-span-12">
             <FooterComponent />
           </div>
