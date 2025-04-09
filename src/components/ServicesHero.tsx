@@ -1,4 +1,4 @@
-import React from "react";
+import HeroImage from "../assets/ShadowForest.png";
 
 const Services = () => {
   const servicesData = [
@@ -23,6 +23,12 @@ const Services = () => {
     <section id="services" className="bg-green-50 py-10">
       <div className="container mx-auto px-4">
         <h2 className="text-2xl font-bold mb-6">What I Do</h2>
+        
+        <div className=" max-w-[37%] float-right ml-5 mb-5 md:float-left md:mr-8 ">
+            <img className="rounded-lg" src={HeroImage} />
+            <p className="text-gray-400 text-[0.67rem] pt-2">This is shadow, our resident dog and a very very good boy.</p>
+        </div>
+
         <div className="grid md:grid-cols-3 gap-8">
           {servicesData.map((service, index) => (
             <div

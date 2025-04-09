@@ -16,7 +16,7 @@ import { Routes, Route, BrowserRouter } from 'react-router-dom';
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <BrowserRouter>
-      <div className="grid grid-cols-12 gap-0 justify-stretch align-stretch min-h-screen grid-rows-[48px_auto_105px] md:grid-rows-[72px_auto_105px]">
+      <div className="grid grid-cols-12 gap-0 justify-stretch align-stretch min-h-screen grid-rows-[48px_auto_73px] md:grid-rows-[72px_auto_73px]">
           <div className="col-span-12">
               <HeaderComponent />
             </div>

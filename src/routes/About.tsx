@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="bg-white pl-8 pr-5 md:pl-12 pt-8">
       <div className="">
-        <h1 className="text-3xl pb-8">Rainbow Fern Consulting</h1>
+        <h1 className="text-3xl font-semibold pb-8">Rainbow Fern Consulting</h1>
         <div className="">
           <img className="float-left mr-5 mb-5 w-[37%] md:w-[40%] md:float-right md:ml-8 rounded-lg" src={AboutHeroImage} />
           <p className="mb-5 text-sm">Hi! I’m Alex, founder of Rainbow Fern consulting.</p>
@@ -16,8 +16,8 @@ function App() {
           <p className="clear-left md:clear-right size-0">&nbsp;</p>
         </div>
       </div>
-      <div className="mt-18">
-        <h2 className="text-2xl mb-5">Current Projects</h2>
+      <section id="current-projects-hero" className="my-18">
+        <h2 className="text-2xl font-semibold mb-5">Current Projects</h2>
         <div className="flex gap-0">
           <div className="w-1/3">
             <h3 className="font-bold mb-2">Portfolio Website</h3>
@@ -34,7 +34,7 @@ function App() {
             <p className="text-xs text-gray-600 pr-5">A set of python scripts to extract data from bank statements and summarize.</p>
           </div>
         </div>
-      </div>
+      </section>
       <ServicesHero />
     </div>
   )
