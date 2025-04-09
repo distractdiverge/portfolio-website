@@ -4,9 +4,24 @@ import rainbowFernLogo from '../assets/fern-colors-web.svg';
 
 const HeaderComponent : React.FC = () => {
 
-    const common = "text-xs md:text-base block p-2";
-    const linkClassname = `${common} hover:text-gray-400 hover:underline`;
-    const buttonClassname = `${common} rounded-md leading-[22px] bg-gray-800 text-white mx-auto hover:text-black hover:bg-gray-400`;
+    const links = [
+        {
+            title: "Skills",
+            to: "/skills",
+        },
+        {
+            title: "Projects",
+            to: "/projects",
+        },
+        {
+            title: "Experience",
+            to: "/experience",
+        },
+        {
+            title: "Education",
+            to: "/education",
+        },
+    ];
 
     return (
         <header className="bg-white flex justify-between p-1 md:p-4">
@@ -19,11 +34,12 @@ const HeaderComponent : React.FC = () => {
                 </h1>
             </div>
             <div className="flex">
-                <NavLink className={linkClassname}   to="/skills">Skills</NavLink>
-                <NavLink className={linkClassname}   to="/projects">Projects</NavLink>
-                <NavLink className={linkClassname}   to="/experience">Experience</NavLink>
-                <NavLink className={linkClassname}   to="/education">Education</NavLink>
-                <NavLink className={buttonClassname} to="/contact">Contact</NavLink>
+
+                {links.map(({title, to}) => (
+                    <NavLink className="text-xs md:text-base block p-2 hover:text-gray-400 hover:underline" to={to}>{title}</NavLink>
+                ))}
+
+                <NavLink className="text-xs md:text-base block p-2 rounded-md leading-[22px] bg-gray-800 text-white mx-auto hover:text-black hover:bg-gray-400" to="/contact">Contact</NavLink>
             </div>
         </header>
     );
