@@ -1,4 +1,5 @@
 import AboutHeroImage from '../assets/AllieLooktoSide.png'
+import ServicesHero from '../components/ServicesHero.tsx';
 
 function App() {
   
@@ -34,6 +35,7 @@ function App() {
           </div>
         </div>
       </div>
+      <ServicesHero />
     </div>
   )
 }
