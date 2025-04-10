@@ -6,6 +6,10 @@ const HeaderComponent : React.FC = () => {
 
     const links = [
         {
+            title: "About",
+            to: "/",
+        },
+        {
             title: "Skills",
             to: "/skills",
         },
@@ -36,10 +40,10 @@ const HeaderComponent : React.FC = () => {
             <div className="flex">
 
                 {links.map(({title, to}) => (
-                    <NavLink className="text-xs md:text-base block p-2 hover:text-gray-400 hover:underline" to={to}>{title}</NavLink>
+                    <NavLink className="text-xs md:text-base block px-1 py-3 md:px-2 hover:text-gray-400 hover:underline" to={to}>{title}</NavLink>
                 ))}
 
-                <NavLink className="text-xs md:text-base block p-2 rounded-md leading-[22px] bg-gray-800 text-white mx-auto hover:text-black hover:bg-gray-400" to="/contact">Contact</NavLink>
+                <NavLink className="text-xs md:text-base block m-3 mt-2 p-1 px-2 rounded-md bg-gray-800 text-white mx-auto hover:text-black hover:bg-gray-400" to="/contact">Contact</NavLink>
             </div>
         </header>
     );
