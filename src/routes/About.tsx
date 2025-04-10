@@ -1,5 +1,6 @@
 import AboutHeroImage from '../assets/AllieLooktoSide.png'
 import ServicesHero from '../components/ServicesHero.tsx';
+import HorizontalDash from '../components/horizontal-dash.tsx';
 
 function App() {
   
@@ -16,25 +17,37 @@ function App() {
           <p className="clear-left md:clear-right size-0">&nbsp;</p>
         </div>
       </div>
+
       <section id="current-projects-hero" className="my-18">
-        <h2 className="text-2xl font-semibold mb-5">Current Projects</h2>
+        <h2 className="text-md font-semibold mb-5">Current Projects</h2>
         <div className="flex gap-0">
           <div className="w-1/3">
-            <h3 className="font-bold mb-2">Portfolio Website</h3>
+            <h3 className="text-sm font-bold mb-2">Portfolio Website</h3>
             <p className="text-xs text-gray-600 pr-5">This site itself. Building out a new professional portfolio website.</p>
           </div>
 
           <div className="w-1/3">
-            <h3 className="font-bold mb-2">Receipt Parser</h3>
+            <h3 className="text-sm font-bold mb-2">Receipt Parser</h3>
             <p className="text-xs text-gray-600 pr-5">A series of python scripts and integration with AI models to parse out receipts for budgeting.</p>
           </div>
 
           <div className="w-1/3">
-            <h3 className="font-bold mb-2">Statement Summarizer</h3>
+            <h3 className="text-sm font-bold mb-2">Statement Summarizer</h3>
             <p className="text-xs text-gray-600 pr-5">A set of python scripts to extract data from bank statements and summarize.</p>
           </div>
         </div>
+        <a
+            href="/projects"
+            className="inline-block bg-gray-600 text-white text-sm mt-4 px-6 py-2 rounded-md hover:bg-gray-400 hover:text-gray-700 transition-colors"
+          >
+            See My Projects
+          </a>
       </section>
+
+      <div className="w-auto">
+          <div className="border-gray-200 border-t p-4">&nbsp;</div>
+      </div>
+
       <ServicesHero />
     </div>
   )
