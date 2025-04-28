@@ -1,6 +1,5 @@
 import AboutHeroImage from '../assets/AllieLooktoSide.png'
 import ServicesHero from '../components/ServicesHero.tsx';
-import HorizontalDash from '../components/horizontal-dash.tsx';
 
 function App() {
   
