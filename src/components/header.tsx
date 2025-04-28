@@ -54,9 +54,9 @@ const HeaderComponent : React.FC = () => {
     const MobileNav = ({ links, className }: { links: {title: string, to: string}[], className: string }) =>
         <div className="relative">
             <button className="md:hidden z-50 relative w-10 h-8 flex flex-col justify-between" onClick={() => setIsOpen(!isOpen)}>
-                <span className={`h-1 w-full bg-black transition-all duration-300 ${isOpen ? "rotate-45 translate-y-3" : ""}`}></span>
-                <span className={`h-1 w-full bg-black transition-all duration-300 ${isOpen ? "opacity-0" : ""}`}></span>
-                <span className={`h-1 w-full bg-black transition-all duration-300 ${isOpen ? "-rotate-45 -translate-y-3" : ""}`}></span>
+                <span className={`h-1 w-full bg-gray-800 transition-all duration-300 ${isOpen ? "rotate-45 translate-y-3" : ""}`}></span>
+                <span className={`h-1 w-full bg-gray-800 transition-all duration-300 ${isOpen ? "opacity-0" : ""}`}></span>
+                <span className={`h-1 w-full bg-gray-800 transition-all duration-300 ${isOpen ? "-rotate-45 -translate-y-3" : ""}`}></span>
             </button>
             <nav 
             onClick={() => setIsOpen(false)}
@@ -68,8 +68,9 @@ const HeaderComponent : React.FC = () => {
                 ${className}
             `}>
                 {links.map(({title, to}) => (
-                    <NavLink className="text-xs md:text-base block px-1 py-3 md:px-2 hover:text-gray-400 hover:underline" to={to}>{title}</NavLink>
+                    <NavLink className="text-2xl md:text-base block px-1 py-3 md:px-2 hover:text-gray-400 hover:underline" to={to}>{title}</NavLink>
                 ))}
+                <NavLink className="text-2xl md:text-base block px-1 py-3 md:px-2 hover:text-gray-400 hover:underline" to="/contact">Contact</NavLink>
             </nav>
         </div> ;
 
@@ -85,8 +86,8 @@ const HeaderComponent : React.FC = () => {
             </div>
             <div ref={menuRef}>
                 <MobileNav className="" links={navigationLinks} />
-                <DesktopNav className="hidden" links={navigationLinks} />
             </div>
+            <DesktopNav className="hidden md:flex" links={navigationLinks} />
         </header>
     );
 };
