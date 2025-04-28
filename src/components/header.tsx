@@ -54,14 +54,14 @@ const HeaderComponent : React.FC = () => {
     const MobileNav = ({ links, className }: { links: {title: string, to: string}[], className: string }) =>
         <div className="relative">
             <button className="md:hidden z-50 relative w-10 h-8 flex flex-col justify-between" onClick={() => setIsOpen(!isOpen)}>
-                <span className={`h-1 w-full bg-gray-800 transition-all duration-300 ${isOpen ? "rotate-45 translate-y-3" : ""}`}></span>
-                <span className={`h-1 w-full bg-gray-800 transition-all duration-300 ${isOpen ? "opacity-0" : ""}`}></span>
-                <span className={`h-1 w-full bg-gray-800 transition-all duration-300 ${isOpen ? "-rotate-45 -translate-y-3" : ""}`}></span>
+                <span className={`h-1 w-full bg-gray-800 transform transition-all duration-300 origin-center ${isOpen ? "rotate-45 translate-y-4" : ""}`}></span>
+                <span className={`h-1 w-full bg-gray-800 transform transition-all duration-300 ${isOpen ? "opacity-0" : ""}`}></span>
+                <span className={`h-1 w-full bg-gray-800 transform transition-all duration-300 origin-center ${isOpen ? "-rotate-45 -translate-y-3" : ""}`}></span>
             </button>
             <nav 
             onClick={() => setIsOpen(false)}
             className={`
-                fixed top-0 left-0 w-full h-screen bg-white 
+                fixed top-0 left-0 w-full h-screen bg-white z-40
                 transform transition-transform duration-300 ease-in-out
                 ${isOpen ? "translate-x-0" : "translate-x-full"}
                 md:hidden flex flex-col items-center justify-center space-y-6
