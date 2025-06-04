@@ -18,7 +18,7 @@ function Projects() {
         <div className="relative z-10">
           <h1 className="text-5xl font-bold mb-5">Projects</h1>
           <p className="text-xl mb-8">
-            Subheading with description of your shopping site
+            A list of my most recent projects, and links to the code and details.
           </p>
           <button className="bg-black text-white py-3 px-6 rounded-md text-base font-semibold cursor-pointer transition-colors duration-300 ease-in-out hover:bg-gray-800">
             Button
