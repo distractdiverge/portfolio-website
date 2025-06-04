@@ -26,10 +26,6 @@ const HeaderComponent : React.FC = () => {
             to: "/",
         },
         {
-            title: "Skills",
-            to: "/skills",
-        },
-        {
             title: "Projects",
             to: "/projects",
         },

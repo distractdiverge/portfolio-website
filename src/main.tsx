@@ -3,10 +3,9 @@ import * as ReactDOM from 'react-dom/client';
 import './index.css';
 import About from './routes/About.tsx';
 import Contact from './routes/Contact.tsx';
-import Education from './routes/Education.tsx';
 import Experience from './routes/Experience.tsx';
 import Projects from './routes/Projects.tsx';
-import Skills from './routes/Skills.tsx';
+import EducationAndSkills from './routes/EducationAndSkills.tsx';
 import HeaderComponent from './components/header.tsx';
 import FooterComponent from './components/footer.tsx';
 
@@ -25,8 +24,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
             <Routes>
                 <Route path="/"           element={<About />}       errorElement={<ErrorPage />} />
                 <Route path="/projects"   element={<Projects />}    errorElement={<ErrorPage />}/>
-                <Route path="/skills"     element={<Skills />}      errorElement={<ErrorPage />}/>
-                <Route path="/education"  element={<Education />}   errorElement={<ErrorPage />}/>
+                <Route path="/education"  element={<EducationAndSkills />}   errorElement={<ErrorPage />}/>
                 <Route path="/experience" element={<Experience />}  errorElement={<ErrorPage />}/>
                 <Route path="/contact"    element={<Contact/>}      errorElement={<ErrorPage />}/>
               </Routes>
