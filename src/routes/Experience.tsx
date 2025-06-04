@@ -1,5 +1,3 @@
-import React from 'react';
-
 // Define a type for individual experience items
 type ExperienceItem = {
   title: string;
