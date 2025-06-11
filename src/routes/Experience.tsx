@@ -1,3 +1,5 @@
+import useSeo from '../hooks/useSeo.tsx';
+
 // Define a type for individual experience items
 type ExperienceItem = {
   title: string;
@@ -98,6 +100,11 @@ const experiences: ExperienceItem[] = [
 ];
 
 function Experience() {
+  useSeo({ 
+    title: 'Experience | Alex Lapinski',
+    description: 'Review the extensive professional experience of Alex Lapinski, from Principal Technical Staff at PayPal to Independent Contractor, showcasing a career in software engineering and architecture.' 
+  });
+
   return (
     <div className="py-10 px-5 max-w-4xl mx-auto text-gray-800">
       <h1 className="text-4xl md:text-5xl font-bold mb-4 text-center md:text-left">Experience</h1>

@@ -1,7 +1,13 @@
 import ProjectCardComponent from "../components/Project-Card";
+import useSeo from '../hooks/useSeo.tsx';
 // Removed: import './Projects.css';
 
 function Projects() {
+  useSeo({ 
+    title: 'Projects | Alex Lapinski',
+    description: 'Explore a selection of recent projects by Alex Lapinski, including a portfolio website and an AI-powered offline research assistant. View details and links to the code.' 
+  });
+
   const heroStyle = {
     backgroundImage: "url('https://picsum.photos/id/210/1200/400')", // Placeholder background
   };

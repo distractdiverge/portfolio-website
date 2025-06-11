@@ -1,7 +1,13 @@
 import React, { useState } from 'react';
+import useSeo from '../hooks/useSeo.tsx';
 import userImage from '../assets/AllieLooktoFront.png';
 
 function Contact() {
+  useSeo({ 
+    title: 'Contact | Alex Lapinski',
+    description: 'Get in touch with Alex Lapinski to discuss potential projects, collaborations, or mentorship opportunities. Let\'s build something impactful together.' 
+  });
+
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');

@@ -1,8 +1,13 @@
-import AboutHeroImage from '../assets/AllieLooktoSide.png'
+import AboutHeroImage from '../assets/AllieLooktoSide.png';
 import ServicesHero from '../components/ServicesHero.tsx';
+import useSeo from '../hooks/useSeo.tsx';
 
 function App() {
-  
+  useSeo({ 
+    title: 'Alex Lapinski | Software & Automation Consultant',
+    description: 'Welcome to the portfolio of Alex Lapinski. Specializing in software development, test automation, and project mentorship with over 18 years of experience.' 
+  });
+
   return (
     <div className="bg-white pl-8 pr-5 md:pl-12 pt-8">
       <div className="">
