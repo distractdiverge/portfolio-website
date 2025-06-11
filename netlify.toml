@@ -4,7 +4,7 @@
 
 # The redirect rule for SPA is already handled by public/_redirects
 # If you prefer to manage it here, you could add:
-# [[redirects]]
-#   from = "/*"
-#   to = "/index.html"
-#   status = 200
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
