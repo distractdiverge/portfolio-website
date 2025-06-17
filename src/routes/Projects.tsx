@@ -34,6 +34,14 @@ function Projects() {
 
       <div className="py-10 px-5 max-w-6xl mx-auto">
         <ProjectCardComponent
+          name="Collaborative Text Editor"
+          description="An Electron-based desktop application that enables real-time collaborative text editing, featuring AI-powered code generation and task execution capabilities."
+          imageUrl="https://picsum.photos/id/42/600/400" // Placeholder image - PLEASE UPDATE
+          detailsUrl="#" // Placeholder link - PLEASE UPDATE
+          githubUrl="https://github.com/distractdiverge/text-ai-collab-tool"
+          imagePosition="left" // Alternating from the next one
+        />
+        <ProjectCardComponent
           name="Portfolio Website"
           description="This website, showcasing my projects, experience, and skills."
           imageUrl="https://picsum.photos/id/119/600/400" // Placeholder image
