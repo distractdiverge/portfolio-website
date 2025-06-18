@@ -87,7 +87,7 @@ export default function ProjectsPage() {
           <ProjectCard
             name="Portfolio Website"
             description="This website, showcasing my projects, experience, and skills. Built with Next.js, TypeScript, and Tailwind CSS for optimal performance and SEO."
-            imageUrl="/assets/projects/portfolio.jpg"
+            imageUrl="/assets/projects/PortfolioWebsite_thumb.png"
             detailsUrl="/projects/portfolio-website"
             githubUrl="https://github.com/distractdiverge/portfolio-website"
             imagePosition="right"
