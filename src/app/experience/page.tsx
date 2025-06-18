@@ -157,7 +157,7 @@ export default function ExperiencePage() {
           {experiences.map((exp, index) => (
             <div
               key={index}
-              className="group relative rounded-xl border-l-4 border-blue-500 bg-white p-6 shadow-md transition-shadow duration-300 hover:shadow-lg dark:bg-gray-800 md:p-8"
+              className="group relative rounded-xl border-l-4 border-primary-500 bg-white p-6 shadow-md transition-shadow duration-300 hover:shadow-lg dark:bg-gray-800 md:p-8"
               data-aos="fade-up"
               data-aos-delay={index * 50}
             >
@@ -175,7 +175,7 @@ export default function ExperiencePage() {
                       </>
                     )}
                   </div>
-                  <div className="mb-4 inline-block rounded-full bg-blue-100 px-3 py-1 text-sm font-medium text-blue-800 dark:bg-blue-900/30 dark:text-blue-200">
+                  <div className="mb-4 inline-block rounded-full bg-primary-100 px-3 py-1 text-sm font-medium text-primary-800 dark:bg-primary-900/30 dark:text-primary-200">
                     {exp.dates}
                   </div>
                 </div>
@@ -184,7 +184,7 @@ export default function ExperiencePage() {
               <ul className="mt-4 space-y-3">
                 {exp.responsibilities.map((responsibility, i) => (
                   <li key={i} className="flex items-start">
-                    <span className="mr-2 mt-1 text-blue-500">•</span>
+                    <span className="mr-2 mt-1 text-primary-500">•</span>
                     <span className="text-gray-700 dark:text-gray-300">
                       {responsibility}
                     </span>
@@ -193,7 +193,7 @@ export default function ExperiencePage() {
               </ul>
 
               {/* Decorative element */}
-              <div className="absolute -left-1 top-0 h-full w-1 rounded-full bg-gradient-to-b from-blue-500 to-blue-400 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+              <div className="absolute -left-1 top-0 h-full w-1 rounded-full bg-gradient-to-b from-primary-500 to-primary-400 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
             </div>
           ))}
         </div>
@@ -208,7 +208,7 @@ export default function ExperiencePage() {
           </p>
           <a
             href="/contact"
-            className="inline-block rounded-lg bg-blue-600 px-6 py-3 font-medium text-white transition-colors duration-200 hover:bg-blue-700"
+            className="inline-block rounded-lg bg-primary-600 px-6 py-3 font-medium text-white transition-colors duration-200 hover:bg-primary-700"
           >
             Contact Me
           </a>

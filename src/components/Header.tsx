@@ -95,22 +95,22 @@ const Header = () => {
   const MobileNav = () => (
     <div className="relative">
       <button
-        className="relative z-50 mr-2 mt-2 flex h-6 w-6 flex-col justify-between focus:outline-none md:hidden"
+        className="relative z-50 mr-2 mt-2 mb-2 flex h-6 w-6 flex-col justify-between focus:outline-none md:hidden"
         onClick={() => setIsOpen(!isOpen)}
         aria-label={isOpen ? 'Close menu' : 'Open menu'}
       >
         <span
-          className={`h-0.5 w-full origin-center transform bg-gray-800 transition-all duration-300 dark:bg-white ${
+          className={`h-1 w-full origin-center transform bg-gray-800 transition-all duration-300 dark:bg-white ${
             isOpen ? 'translate-y-2.5 rotate-45' : ''
           }`}
         ></span>
         <span
-          className={`h-0.5 w-full transform bg-gray-800 transition-all duration-300 dark:bg-white ${
+          className={`h-1 w-full transform bg-gray-800 transition-all duration-300 dark:bg-white ${
             isOpen ? 'opacity-0' : 'opacity-100'
           }`}
         ></span>
         <span
-          className={`h-0.5 w-full origin-center transform bg-gray-800 transition-all duration-300 dark:bg-white ${
+          className={`h-1 w-full origin-center transform bg-gray-800 transition-all duration-300 dark:bg-white ${
             isOpen ? '-translate-y-2.5 -rotate-45' : ''
           }`}
         ></span>

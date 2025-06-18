@@ -17,7 +17,7 @@ const Footer = () => {
               href="https://www.linkedin.com/in/alexlapinski/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-500 transition-colors duration-200 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400"
+              className="text-gray-500 transition-colors duration-200 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400"
               aria-label="LinkedIn Profile"
             >
               <span className="sr-only">LinkedIn</span>

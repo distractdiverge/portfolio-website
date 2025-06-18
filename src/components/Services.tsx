@@ -51,7 +51,7 @@ const Services = () => {
               {servicesData.map((service, index) => (
                 <div
                   key={index}
-                  className="rounded-lg border-l-4 border-blue-500 bg-white p-6 shadow-md transition-shadow duration-300 hover:shadow-lg dark:bg-gray-800"
+                  className="rounded-lg border-l-4 border-primary-500 bg-white p-6 shadow-md transition-shadow duration-300 hover:shadow-lg dark:bg-gray-800"
                 >
                   <h3 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
                     {service.title}
@@ -66,7 +66,7 @@ const Services = () => {
             <div className="mt-8">
               <a
                 href="/contact"
-                className="inline-block rounded-md bg-blue-600 px-6 py-3 font-medium text-white transition-colors duration-200 hover:bg-blue-700"
+                className="inline-block rounded-md bg-primary-600 px-6 py-3 font-medium text-white transition-colors duration-200 hover:bg-primary-700"
               >
                 Contact Me
               </a>

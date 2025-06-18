@@ -93,7 +93,7 @@ export default function AboutPage() {
           <div className="text-center">
             <a
               href="/projects"
-              className="inline-block rounded-md bg-blue-600 px-6 py-3 font-medium text-white transition-colors duration-200 hover:bg-blue-700"
+              className="inline-block rounded-md bg-primary-600 px-6 py-3 font-medium text-white transition-colors duration-200 hover:bg-primary-700"
             >
               View All Projects
             </a>
