@@ -62,7 +62,7 @@ const Header = () => {
   }) => (
     <Link
       href={href}
-      className={`block px-1 py-3 text-xs hover:text-gray-400 hover:underline md:px-2 md:text-base ${
+      className={`block mx-auto px-4 py-4 text-lg hover:text-gray-400 hover:underline md:px-2 md:py-2 md:text-base ${
         isActive(href)
           ? 'font-bold text-blue-600 dark:text-blue-400'
           : 'text-gray-800 dark:text-gray-200'
@@ -75,7 +75,7 @@ const Header = () => {
   const ContactButton = () => (
     <Link
       href="/contact"
-      className="m-3 mx-auto mt-2 block rounded-md bg-black p-1 px-2 text-xs text-white transition-colors duration-200 hover:bg-gray-700 hover:text-white md:text-base"
+      className="m-3 mx-auto mt-2 block rounded-md bg-black p-1 px-2 text-lg text-white transition-colors duration-200 hover:bg-gray-700 hover:text-white md:text-base"
     >
       Contact
     </Link>
@@ -116,7 +116,7 @@ const Header = () => {
         ></span>
       </button>
       <div
-        className={`fixed right-0 top-0 z-40 h-screen w-3/4 transform bg-white bg-opacity-95 backdrop-blur-md transition-transform duration-300 ease-in-out dark:bg-gray-900 dark:bg-opacity-95 ${isOpen ? 'translate-x-0' : 'translate-x-full'} flex flex-col items-center justify-center space-y-6 shadow-2xl md:hidden`}
+        className={`fixed right-0 top-0 z-40 h-screen w-full max-w-md transform bg-white bg-opacity-95 backdrop-blur-md transition-transform duration-300 ease-in-out dark:bg-gray-900 dark:bg-opacity-95 ${isOpen ? 'translate-x-0' : 'translate-x-full'} flex flex-col items-start justify-start pt-20 pl-8 space-y-4 shadow-2xl md:hidden`}
       >
         {navigationLinks.map(({ title, href }) => (
           <NavLink key={href} href={href}>

@@ -91,7 +91,7 @@ export default function Home() {
 
           <Link
             href="/projects"
-            className="inline-block rounded-md bg-blue-600 px-6 py-2 font-semibold text-white transition-colors hover:bg-blue-700"
+            className="inline-block rounded-md bg-gray-700 px-6 py-2 font-semibold text-white transition-colors hover:bg-gray-600"
           >
             See My Projects
           </Link>
