@@ -158,7 +158,7 @@ export default function EducationAndSkills() {
     <div className="min-h-screen bg-white text-gray-800 transition-colors duration-200 dark:bg-gray-900 dark:text-gray-100">
       {/* Hero Section */}
       <div className="relative bg-cover bg-center py-24 md:py-32">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary-900/80 to-purple-900/80 dark:from-black/70 dark:to-black/70">
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1550399105-c4db5fb85c18?ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80')]">
           <Image
             src="/assets/education-hero.jpg"
             alt="Education background"

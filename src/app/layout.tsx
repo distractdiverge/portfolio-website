@@ -51,9 +51,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Allie Lapinski | Software Engineer',
+    title: 'Astrid Lapinski | Software Engineer',
     description:
-      'Portfolio of Allie Lapinski - Software Engineer and Web Developer',
+      'Portfolio of Astrid Lapinski - Software Engineer and Web Developer',
     creator: '@yourtwitterhandle',
     images: ['/images/og-image.jpg'],
   },
