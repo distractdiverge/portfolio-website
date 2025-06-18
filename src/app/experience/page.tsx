@@ -3,9 +3,9 @@ import { useMemo } from 'react';
 
 // Update metadata for the experience page
 export const metadata: Metadata = {
-  title: 'Experience | Allie Lapinski',
+  title: 'Experience | Astrid Lapinski',
   description:
-    'Professional experience and work history of Allie Lapinski, showcasing a diverse background in software engineering, test automation, and technical leadership.',
+    'Professional experience and work history of Astrid Lapinski, showcasing a diverse background in software engineering, test automation, and technical leadership.',
   keywords: [
     'work experience',
     'software engineer',
@@ -13,12 +13,12 @@ export const metadata: Metadata = {
     'technical leadership',
     'career history',
     'professional background',
-    'Allie Lapinski experience',
+    'Astrid Lapinski experience',
   ],
   openGraph: {
-    title: 'Experience | Allie Lapinski',
+    title: 'Experience | Astrid Lapinski',
     description:
-      'Professional experience and work history of Allie Lapinski, showcasing a diverse background in software engineering and technical leadership.',
+      'Professional experience and work history of Astrid Lapinski, showcasing a diverse background in software engineering and technical leadership.',
     type: 'website',
     url: '/experience',
     images: [
@@ -26,14 +26,14 @@ export const metadata: Metadata = {
         url: '/images/og-experience.jpg',
         width: 1200,
         height: 630,
-        alt: 'Professional Experience - Allie Lapinski',
+        alt: 'Professional Experience - Astrid Lapinski',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Experience | Allie Lapinski',
-    description: 'Professional experience and work history of Allie Lapinski.',
+    title: 'Experience | Astrid Lapinski',
+    description: 'Professional experience and work history of Astrid Lapinski.',
     images: ['/images/og-experience.jpg'],
   },
   alternates: {

@@ -58,7 +58,7 @@ export default function ContactForm() {
     const body = `Name: ${formData.firstName} ${formData.lastName}%0D%0AEmail: ${formData.email}%0D%0A%0D%0A${formData.message}`;
 
     // Open default email client
-    window.location.href = `mailto:allie@example.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+    window.location.href = `mailto:astrid@example.com?subject=${encodeURIComponent(subject)}&body=${body}`;
 
     setSubmitStatus({
       success: true,
@@ -222,7 +222,7 @@ export default function ContactForm() {
                   </svg>
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/allielapinski/"
+                  href="https://www.linkedin.com/in/alexlapinski/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-500 transition-colors hover:text-gray-700 dark:text-gray-400 dark:hover:text-white"
@@ -238,7 +238,7 @@ export default function ContactForm() {
                   </svg>
                 </a>
                 <a
-                  href="mailto:allie@example.com"
+                  href="mailto:astrid@example.com"
                   className="text-gray-500 transition-colors hover:text-gray-700 dark:text-gray-400 dark:hover:text-white"
                   aria-label="Email"
                 >
@@ -265,8 +265,8 @@ export default function ContactForm() {
           <div className="hidden lg:block">
             <div className="relative h-full min-h-[500px] overflow-hidden rounded-2xl">
               <Image
-                src="/assets/AllieLooktoFront.png"
-                alt="Allie Lapinski"
+                src="/assets/AstridLooktoFront.png"
+                alt="Astrid Lapinski"
                 fill
                 className="object-cover object-center"
                 priority

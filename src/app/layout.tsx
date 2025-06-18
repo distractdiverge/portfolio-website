@@ -12,18 +12,18 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Allie Lapinski | Software Engineer',
+  title: 'Astrid Lapinski | Software Engineer',
   description:
-    'Portfolio of Allie Lapinski - Software Engineer and Web Developer',
+    'Portfolio of Astrid Lapinski - Software Engineer and Web Developer',
   keywords: [
     'portfolio',
     'software engineer',
     'web developer',
-    'Allie Lapinski',
+    'Astrid Lapinski',
   ],
-  authors: [{ name: 'Allie Lapinski' }],
-  creator: 'Allie Lapinski',
-  publisher: 'Allie Lapinski',
+  authors: [{ name: 'Astrid Lapinski' }],
+  creator: 'Astrid Lapinski',
+  publisher: 'Astrid Lapinski',
   formatDetection: {
     email: false,
     address: false,
@@ -33,11 +33,11 @@ export const metadata: Metadata = {
     process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
   ),
   openGraph: {
-    title: 'Allie Lapinski | Software Engineer',
+    title: 'Astrid Lapinski | Software Engineer',
     description:
-      'Portfolio of Allie Lapinski - Software Engineer and Web Developer',
+      'Portfolio of Astrid Lapinski - Software Engineer and Web Developer',
     url: '/',
-    siteName: 'Allie Lapinski',
+    siteName: 'Astrid Lapinski',
     locale: 'en_US',
     type: 'website',
     images: [
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
         url: '/images/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Allie Lapinski - Software Engineer',
+        alt: 'Astrid Lapinski - Software Engineer',
       },
     ],
   },

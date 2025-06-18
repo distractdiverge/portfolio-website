@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center justify-between md:flex-row">
           <p className="mb-4 text-sm text-gray-500 dark:text-gray-400 md:mb-0">
-            &copy; {currentYear} Allie Lapinski. All rights reserved.
+            &copy; {currentYear} Astrid Lapinski. All rights reserved.
           </p>
           <div className="flex space-x-6">
             <a

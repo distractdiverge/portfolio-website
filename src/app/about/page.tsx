@@ -4,9 +4,9 @@ import Services from '@/components/Services';
 
 // Update metadata for the about page
 export const metadata: Metadata = {
-  title: 'About | Allie Lapinski',
+  title: 'About | Astrid Lapinski',
   description:
-    'Learn more about Allie Lapinski, a software engineer and consultant with over 18 years of experience in software development, test automation, and engineering mentorship.',
+    'Learn more about Astrid Lapinski, a software engineer and consultant with over 18 years of experience in software development, test automation, and engineering mentorship.',
 };
 
 export default function AboutPage() {
@@ -21,7 +21,7 @@ export default function AboutPage() {
             </h1>
             <div className="prose max-w-none dark:prose-invert">
               <p className="mb-6 text-lg">
-                Hi! I&apos;m Allie, founder of Rainbow Fern Consulting.
+                Hi! I&apos;m Astrid, founder of Rainbow Fern Consulting.
               </p>
               <p className="mb-6">
                 I have worked in the software field for the last 18 years,
@@ -41,8 +41,8 @@ export default function AboutPage() {
           <div className="md:w-1/2">
             <div className="relative h-96 w-full overflow-hidden rounded-xl shadow-xl md:h-[32rem]">
               <Image
-                src="/assets/AllieLooktoSide.png"
-                alt="Allie Lapinski"
+                src="/assets/AstridLooktoSide.png"
+                alt="Astrid Lapinski"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"

@@ -3,11 +3,11 @@ import ContactForm from './ContactForm';
 
 // Update metadata for the contact page
 export const metadata: Metadata = {
-  title: 'Contact | Allie Lapinski',
+  title: 'Contact | Astrid Lapinski',
   description:
-    "Get in touch with Allie Lapinski to discuss potential projects, collaborations, or mentorship opportunities. Let's build something impactful together.",
+    "Get in touch with Astrid Lapinski to discuss potential projects, collaborations, or mentorship opportunities. Let's build something impactful together.",
   keywords: [
-    'contact Allie Lapinski',
+    'contact Astrid Lapinski',
     'hire software engineer',
     'collaboration inquiry',
     'mentorship request',
@@ -17,9 +17,9 @@ export const metadata: Metadata = {
     'software development services',
   ],
   openGraph: {
-    title: 'Contact | Allie Lapinski',
+    title: 'Contact | Astrid Lapinski',
     description:
-      'Get in touch with Allie Lapinski to discuss potential projects, collaborations, or mentorship opportunities.',
+      'Get in touch with Astrid Lapinski to discuss potential projects, collaborations, or mentorship opportunities.',
     type: 'website',
     url: '/contact',
     images: [
@@ -27,13 +27,13 @@ export const metadata: Metadata = {
         url: '/images/og-contact.jpg',
         width: 1200,
         height: 630,
-        alt: 'Contact Allie Lapinski',
+        alt: 'Contact Astrid Lapinski',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Contact | Allie Lapinski',
+    title: 'Contact | Astrid Lapinski',
     description:
       'Get in touch to discuss potential projects, collaborations, or mentorship opportunities.',
     images: ['/images/og-contact.jpg'],

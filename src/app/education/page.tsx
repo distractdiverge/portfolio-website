@@ -3,9 +3,9 @@ import { Metadata } from 'next';
 
 // Update metadata for the education & skills page
 export const metadata: Metadata = {
-  title: 'Education & Skills | Allie Lapinski',
+  title: 'Education & Skills | Astrid Lapinski',
   description:
-    'Discover the educational background and extensive skill set of Allie Lapinski, including proficiency in C#, Python, React, and various development tools and techniques.',
+    'Discover the educational background and extensive skill set of Astrid Lapinski, including proficiency in C#, Python, React, and various development tools and techniques.',
   keywords: [
     'education',
     'skills',
@@ -13,12 +13,12 @@ export const metadata: Metadata = {
     'software development',
     'programming languages',
     'web development',
-    'Allie Lapinski skills',
+    'Astrid Lapinski skills',
   ],
   openGraph: {
-    title: 'Education & Skills | Allie Lapinski',
+    title: 'Education & Skills | Astrid Lapinski',
     description:
-      'Discover the educational background and technical skills of Allie Lapinski, including expertise in software development, test automation, and engineering best practices.',
+      'Discover the educational background and technical skills of Astrid Lapinski, including expertise in software development, test automation, and engineering best practices.',
     type: 'website',
     url: '/education',
     images: [
@@ -26,15 +26,15 @@ export const metadata: Metadata = {
         url: '/images/og-education.jpg',
         width: 1200,
         height: 630,
-        alt: 'Education & Skills - Allie Lapinski',
+        alt: 'Education & Skills - Astrid Lapinski',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Education & Skills | Allie Lapinski',
+    title: 'Education & Skills | Astrid Lapinski',
     description:
-      'Discover the educational background and technical skills of Allie Lapinski.',
+      'Discover the educational background and technical skills of Astrid Lapinski.',
     images: ['/images/og-education.jpg'],
   },
   alternates: {

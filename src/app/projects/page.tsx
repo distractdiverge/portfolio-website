@@ -4,9 +4,9 @@ import ProjectCard from '@/components/ProjectCard';
 
 // Update metadata for the projects page
 export const metadata: Metadata = {
-  title: 'Projects | Allie Lapinski',
+  title: 'Projects | Astrid Lapinski',
   description:
-    'Explore a selection of recent projects by Allie Lapinski, including a portfolio website and an AI-powered offline research assistant. View details and links to the code.',
+    'Explore a selection of recent projects by Astrid Lapinski, including a portfolio website and an AI-powered offline research assistant. View details and links to the code.',
   keywords: [
     'portfolio projects',
     'software development',
@@ -16,9 +16,9 @@ export const metadata: Metadata = {
     'software engineering portfolio',
   ],
   openGraph: {
-    title: 'Projects | Allie Lapinski',
+    title: 'Projects | Astrid Lapinski',
     description:
-      'Explore a selection of recent projects by Allie Lapinski. View details and links to the code.',
+      'Explore a selection of recent projects by Astrid Lapinski. View details and links to the code.',
     type: 'website',
     url: '/projects',
     images: [
@@ -26,15 +26,15 @@ export const metadata: Metadata = {
         url: '/images/og-projects.jpg',
         width: 1200,
         height: 630,
-        alt: 'Projects by Allie Lapinski',
+        alt: 'Projects by Astrid Lapinski',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Projects | Allie Lapinski',
+    title: 'Projects | Astrid Lapinski',
     description:
-      'Explore a selection of recent projects by Allie Lapinski. View details and links to the code.',
+      'Explore a selection of recent projects by Astrid Lapinski. View details and links to the code.',
     images: ['/images/og-projects.jpg'],
   },
   alternates: {
