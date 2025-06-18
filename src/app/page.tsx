@@ -1,103 +1,115 @@
-import Image from "next/image";
+import Image from 'next/image';
+import Link from 'next/link';
+import { Metadata } from 'next';
+
+// Update metadata for the home page
+export const metadata: Metadata = {
+  title: 'Allie Lapinski | Software & Automation Consultant',
+  description:
+    'Welcome to the portfolio of Allie Lapinski. Specializing in software development, test automation, and project mentorship with over 18 years of experience.',
+};
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="container mx-auto max-w-7xl px-4 py-8 md:px-8 lg:px-12">
+      <div className="rounded-lg p-6 md:p-8">
+        <h1 className="mb-8 text-3xl font-semibold text-gray-900 dark:text-white md:text-4xl">
+          Rainbow Fern Consulting
+        </h1>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+        <div className="mb-12 flex flex-col sm:flex-row sm:items-start">
+          <div className="w-full mb-6 sm:mb-0 sm:w-2/5 sm:order-last sm:ml-8">
+            <div className="relative h-64 w-full max-w-[280px] mx-auto overflow-hidden rounded-lg md:h-80 md:max-w-[320px]">
+              <Image
+                src="/assets/AllieLooktoSide.png"
+                alt="Allie Lapinski"
+                fill
+                sizes="(max-width: 768px) 100vw, 40vw"
+                className="rounded-lg object-cover object-top"
+                priority
+              />
+            </div>
+          </div>
+
+          <div className="prose max-w-none dark:prose-invert w-full sm:w-3/5 sm:order-first">
+            <p className="mb-4 text-gray-700 dark:text-gray-300">
+              Hi! I&apos;m Allie, founder of Rainbow Fern consulting.
+            </p>
+            <p className="mb-4 text-gray-700 dark:text-gray-300">
+              I have worked in the software field for the last 18 years working
+              up the corp ladder from intern to architect.
+            </p>
+            <p className="mb-4 text-gray-700 dark:text-gray-300">
+              Now, I am focusing on taking on remote projects, mentoring and
+              helping develop amazing test automation suites.
+            </p>
+            <p className="mb-8 text-gray-700 dark:text-gray-300">
+              Take a look below at some recent projects, or details on what I
+              offer as services.
+            </p>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+        <section className="my-12">
+          <h2 className="mb-6 text-3xl font-bold text-gray-900 dark:text-white">
+            Current Projects
+          </h2>
+          <div className="mb-8 grid grid-cols-1 gap-6 md:grid-cols-3">
+            {/* Project Card 1 */}
+            <div className="rounded-lg bg-gray-100 p-6 dark:bg-gray-800">
+              <h3 className="mb-3 text-lg font-bold text-gray-900 dark:text-white">
+                Portfolio Website
+              </h3>
+              <p className="text-sm text-gray-600 dark:text-gray-300">
+                This site itself. Building out a new professional portfolio
+                website.
+              </p>
+            </div>
+
+            {/* Project Card 2 */}
+            <div className="rounded-lg bg-gray-100 p-6 dark:bg-gray-800">
+              <h3 className="mb-3 text-lg font-bold text-gray-900 dark:text-white">
+                Receipt Parser
+              </h3>
+              <p className="text-sm text-gray-600 dark:text-gray-300">
+                A series of python scripts and integration with AI models to
+                parse out receipts for budgeting.
+              </p>
+            </div>
+
+            {/* Project Card 3 */}
+            <div className="rounded-lg bg-gray-100 p-6 dark:bg-gray-800">
+              <h3 className="mb-3 text-lg font-bold text-gray-900 dark:text-white">
+                Statement Summarizer
+              </h3>
+              <p className="text-sm text-gray-600 dark:text-gray-300">
+                A set of python scripts to extract data from bank statements and
+                summarize.
+              </p>
+            </div>
+          </div>
+
+          <Link
+            href="/projects"
+            className="inline-block rounded-md bg-blue-600 px-6 py-2 font-semibold text-white transition-colors hover:bg-blue-700"
+          >
+            See My Projects
+          </Link>
+        </section>
+
+        <div className="my-12 border-t border-gray-200 dark:border-gray-700"></div>
+
+        {/* Services section will be added here */}
+        <section>
+          <h2 className="mb-6 text-3xl font-bold text-gray-900 dark:text-white">
+            Services
+          </h2>
+          <p className="mb-6 text-gray-700 dark:text-gray-300">
+            I offer a range of services including software development, test
+            automation, and technical mentoring. More details coming soon...
+          </p>
+        </section>
+      </div>
     </div>
   );
 }

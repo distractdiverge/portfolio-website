@@ -1,0 +1,15 @@
+# Ignore build output and node_modules
+.next
+node_modules
+
+# Ignore package lock files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Ignore .env files
+.env*
+
+# Ignore other generated files
+*.log
+.DS_Store
