@@ -63,7 +63,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               href={detailsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className={`${buttonBase} border border-blue-600 bg-blue-600 text-white hover:bg-blue-700`}
+              className={`${buttonBase} border border-gray-700 bg-gray-700 text-white hover:bg-gray-800`}
             >
               Details
             </Link>

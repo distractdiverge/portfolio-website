@@ -64,7 +64,7 @@ const Header = () => {
       href={href}
       className={`block mx-auto px-4 py-4 text-lg hover:text-gray-400 hover:underline md:px-2 md:py-2 md:text-base ${
         isActive(href)
-          ? 'font-bold text-blue-600 dark:text-blue-400'
+          ? 'font-extrabold text-gray-900 underline decoration-2 underline-offset-4 dark:text-white'
           : 'text-gray-800 dark:text-gray-200'
       }`}
     >
