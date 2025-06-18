@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { useMemo } from 'react';
 
 // Update metadata for the experience page
 export const metadata: Metadata = {
@@ -139,6 +140,88 @@ const experiences: ExperienceItem[] = [
   },
 ];
 
+// Color definitions based on the Progress Pride flag
+const flagColors = {
+  // Main rainbow colors
+  purple: { border: 'border-purple-500', bg: 'bg-purple-100', text: 'text-purple-800', darkBg: 'bg-purple-900/30', darkText: 'text-purple-200', gradientFrom: 'from-purple-500', gradientTo: 'from-purple-400' },
+  blue: { border: 'border-blue-500', bg: 'bg-blue-100', text: 'text-blue-800', darkBg: 'bg-blue-900/30', darkText: 'text-blue-200', gradientFrom: 'from-blue-500', gradientTo: 'from-blue-400' },
+  green: { border: 'border-green-500', bg: 'bg-green-100', text: 'text-green-800', darkBg: 'bg-green-900/30', darkText: 'text-green-200', gradientFrom: 'from-green-500', gradientTo: 'from-green-400' },
+  yellow: { border: 'border-yellow-500', bg: 'bg-yellow-100', text: 'text-yellow-800', darkBg: 'bg-yellow-900/30', darkText: 'text-yellow-200', gradientFrom: 'from-yellow-500', gradientTo: 'from-yellow-400' },
+  orange: { border: 'border-orange-500', bg: 'bg-orange-100', text: 'text-orange-800', darkBg: 'bg-orange-900/30', darkText: 'text-orange-200', gradientFrom: 'from-orange-500', gradientTo: 'from-orange-400' },
+  red: { border: 'border-red-500', bg: 'bg-red-100', text: 'text-red-800', darkBg: 'bg-red-900/30', darkText: 'text-red-200', gradientFrom: 'from-red-500', gradientTo: 'from-red-400' },
+  // Additional colors from Progress Pride flag
+  black: { border: 'border-gray-900', bg: 'bg-gray-100', text: 'text-gray-900', darkBg: 'bg-gray-800/30', darkText: 'text-gray-200', gradientFrom: 'from-gray-900', gradientTo: 'from-gray-700' },
+  brown: { border: 'border-amber-800', bg: 'bg-amber-100', text: 'text-amber-900', darkBg: 'bg-amber-900/30', darkText: 'text-amber-200', gradientFrom: 'from-amber-800', gradientTo: 'from-amber-600' },
+  // Trans and additional colors (reserved for future use)
+  transBlue: { border: 'border-sky-400', bg: 'bg-sky-100', text: 'text-sky-800', darkBg: 'bg-sky-900/30', darkText: 'text-sky-200', gradientFrom: 'from-sky-400', gradientTo: 'from-sky-300' },
+  transPink: { border: 'border-pink-300', bg: 'bg-pink-100', text: 'text-pink-800', darkBg: 'bg-pink-900/30', darkText: 'text-pink-200', gradientFrom: 'from-pink-300', gradientTo: 'from-pink-200' },
+  white: { border: 'border-gray-200', bg: 'bg-gray-50', text: 'text-gray-700', darkBg: 'bg-gray-700/30', darkText: 'text-gray-200', gradientFrom: 'from-gray-200', gradientTo: 'from-gray-100' },
+};
+
+// Map each experience to a specific color
+const experienceColors = [
+  'brown',     // Independent Contractor & Software Engineer (Self-Employed)
+  'black',     // Principal Technical Staff (PayPal)
+  'red',       // Senior Engineer in Business Financing (PayPal)
+  'orange',    // Lead Software Engineer (PayPal)
+  'yellow',    // Senior Software Engineer (Swift Capital)
+  'green',     // Principal Developer (Razorfish Healthware)
+  'blue',      // Senior Developer (Razorfish Health)
+  'purple',    // Presentation Layer Developer (Avenue A | Razorfish)
+  // Future experiences will use these colors in order:
+  // 'transBlue',
+  // 'transPink',
+  // 'white'
+];
+
+const ExperienceItem = ({ exp, index }: { exp: ExperienceItem; index: number }) => {
+  // Get the color for this experience, or default to purple if not found
+  const colorName = experienceColors[index] || 'purple';
+  const colors = flagColors[colorName as keyof typeof flagColors] || flagColors.purple;
+
+  return (
+    <div
+      className={`group relative rounded-xl border-l-4 ${colors.border} bg-white p-6 shadow-md transition-shadow duration-300 hover:shadow-lg dark:bg-gray-800 md:p-8`}
+      data-aos="fade-up"
+      data-aos-delay={index * 50}
+    >
+      <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+        <div className="flex-1">
+          <h2 className="mb-1 text-2xl font-bold text-gray-900 dark:text-white">
+            {exp.title}
+          </h2>
+          <div className="mb-3 flex flex-col text-lg text-gray-600 dark:text-gray-300 sm:flex-row sm:items-center">
+            <span className="font-medium">{exp.company}</span>
+            {exp.location && (
+              <>
+                <span className="mx-2 hidden sm:inline">•</span>
+                <span>{exp.location}</span>
+              </>
+            )}
+          </div>
+          <div className={`mb-4 inline-block rounded-full ${colors.bg} px-3 py-1 text-sm font-medium ${colors.text} dark:${colors.darkBg} dark:${colors.darkText}`}>
+            {exp.dates}
+          </div>
+        </div>
+      </div>
+
+      <ul className="mt-4 space-y-3">
+        {exp.responsibilities.map((responsibility, i) => (
+          <li key={i} className="flex items-start">
+            <span className={`mr-2 mt-1 ${colors.text} dark:${colors.darkText}`}>•</span>
+            <span className="text-gray-700 dark:text-gray-300">
+              {responsibility}
+            </span>
+          </li>
+        ))}
+      </ul>
+
+      {/* Decorative element */}
+      <div className={`absolute -left-1 top-0 h-full w-1 rounded-full bg-gradient-to-b ${colors.gradientFrom} ${colors.gradientTo} opacity-0 transition-opacity duration-300 group-hover:opacity-100`}></div>
+    </div>
+  );
+};
+
 export default function ExperiencePage() {
   return (
     <div className="min-h-screen bg-white px-5 py-10 text-gray-800 transition-colors duration-200 dark:bg-gray-900 dark:text-gray-100">
@@ -155,46 +238,7 @@ export default function ExperiencePage() {
 
         <div className="space-y-12">
           {experiences.map((exp, index) => (
-            <div
-              key={index}
-              className="group relative rounded-xl border-l-4 border-primary-500 bg-white p-6 shadow-md transition-shadow duration-300 hover:shadow-lg dark:bg-gray-800 md:p-8"
-              data-aos="fade-up"
-              data-aos-delay={index * 50}
-            >
-              <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
-                <div className="flex-1">
-                  <h2 className="mb-1 text-2xl font-bold text-gray-900 dark:text-white">
-                    {exp.title}
-                  </h2>
-                  <div className="mb-3 flex flex-col text-lg text-gray-600 dark:text-gray-300 sm:flex-row sm:items-center">
-                    <span className="font-medium">{exp.company}</span>
-                    {exp.location && (
-                      <>
-                        <span className="mx-2 hidden sm:inline">•</span>
-                        <span>{exp.location}</span>
-                      </>
-                    )}
-                  </div>
-                  <div className="mb-4 inline-block rounded-full bg-primary-100 px-3 py-1 text-sm font-medium text-primary-800 dark:bg-primary-900/30 dark:text-primary-200">
-                    {exp.dates}
-                  </div>
-                </div>
-              </div>
-
-              <ul className="mt-4 space-y-3">
-                {exp.responsibilities.map((responsibility, i) => (
-                  <li key={i} className="flex items-start">
-                    <span className="mr-2 mt-1 text-primary-500">•</span>
-                    <span className="text-gray-700 dark:text-gray-300">
-                      {responsibility}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-
-              {/* Decorative element */}
-              <div className="absolute -left-1 top-0 h-full w-1 rounded-full bg-gradient-to-b from-primary-500 to-primary-400 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
-            </div>
+            <ExperienceItem key={index} exp={exp} index={index} />
           ))}
         </div>
 
