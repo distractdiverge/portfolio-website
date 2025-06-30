@@ -16,61 +16,80 @@ const educationData = [
 
 const skillsData = {
   languagesAndFrameworks: [
+    { name: 'UML', years: '17 years' },
+    
     { name: 'C#', years: '17 years' },
     { name: 'Python', years: '17 years' },
-    { name: 'Java', years: '17 years' },
-    { name: 'Ruby', years: '17 years' },
-    { name: 'PHP', years: '17 years' },
+    { name: '.NET', years: '17 years' },
     { name: 'Javascript', years: '17 years' },
     { name: 'NodeJS', years: '17 years' },
-    { name: 'Typescript', years: '17 years' },
-    { name: '.NET', years: '17 years' },
-    { name: 'React', years: '17 years' }, // Replaced KrokenJS
-    { name: 'BackboneJS', years: '17 years' },
-    { name: 'AngularJS', years: '17 years' },
-    { name: 'NextJS', years: '17 years' },
-    { name: 'Vite', years: '17 years' },
-    { name: 'Bootstrap', years: '17 years' },
-    { name: 'LESS', years: '17 years' },
-    { name: 'SASS', years: '17 years' },
-    { name: 'UML', years: '17 years' },
-    { name: 'Miro', years: '17 years' },
-    { name: 'Team City', years: '17 years' },
-    { name: 'Storybook', years: '17 years' }, // Replaced Story
-    { name: 'jQuery', years: '17 years' },
-    // Add more as needed
+    { name: 'jQuery', years: '10 years' },
+    { name: 'Typescript', years: '10 years' },
+    { name: 'AngularJS', years: '8 years' },
+    { name: 'React', years: '8 years' },
+    { name: 'Team City', years: '7 years' },
+    { name: 'Miro', years: '6 years' },
+    { name: 'NextJS', years: '6 years' },
+    { name: 'Bootstrap', years: '5 years' },
+    { name: 'LESS', years: '5 years' },
+    { name: 'SASS', years: '5 years' },
+    { name: 'Java', years: '6 years' },
+    { name: 'BackboneJS', years: '3 years' },
+    { name: 'Ruby', years: '2 years' },
+    { name: 'PHP', years: '2 years' },   
+    { name: 'Vite', years: '1 year' },
   ],
   techniquesAndRoles: [
-    { name: 'Wireframes', years: '17 years' },
     { name: 'Technical Reqs', years: '17 years' },
-    { name: 'Annotated Specs', years: '17 years' },
     { name: 'Functional Reqs', years: '17 years' },
-    { name: 'Release Mgmt', years: '17 years' },
     { name: 'Code Review', years: '17 years' },
-    { name: 'Integration Mgmt', years: '17 years' },
-    { name: 'Stakeholder Int.', years: '17 years' }, // Abbreviated for space
-    { name: 'Dev Team Lead', years: '17 years' },
-    // Add more as needed
+    { name: 'Release Mgmt', years: '10 years' },
+    { name: 'Integration Mgmt', years: '10 years' },
+    { name: 'Annotated Specs', years: '10 years' },
+    { name: 'Stakeholder Int.', years: '6 years' },
+    { name: 'Dev Team Lead', years: '6 years' },
+    { name: 'Wireframes', years: '6 years' },
   ],
   tools: [
-    { name: 'Confluence', years: '17 years' },
-    { name: 'Bamboo', years: '17 years' },
-    { name: 'Jenkins', years: '17 years' },
-    { name: 'Adobe CQS', years: '17 years' },
-    { name: 'Drupal', years: '17 years' },
-    { name: 'Wordpress', years: '17 years' },
-    { name: 'Omnigraffle', years: '17 years' },
-    { name: 'Figma', years: '17 years' },
-    { name: 'Redmine', years: '17 years' },
-    { name: 'Jira', years: '17 years' },
-    // Add more as needed
+    { name: 'Jenkins', years: '10 years' },
+    { name: 'Confluence', years: '8 years' },
+    { name: 'Redmine', years: '8 years' },
+    { name: 'Jira', years: '8 years' },
+    { name: 'Bamboo', years: '6 years' },
+    { name: 'Omnigraffle', years: '5 years' },
+    { name: 'Figma', years: '5 years' },
+    { name: 'Drupal', years: '3 years' },
+    { name: 'Wordpress', years: '2 years' },
+    { name: 'Adobe CQS', years: '1 year' },
   ],
 };
 
+const colorMap = (years: string): string => {
+  // Extract the first number from the years string (e.g., "5 years" -> 5)
+  const yearsMatch = years.match(/\d+/);
+  const yearsInt = yearsMatch ? parseInt(yearsMatch[0], 10) : 0;
+
+  if (yearsInt >= 15) {
+    return 'purple';      // Deepest color for most experience (15+ years)
+  } else if (yearsInt >= 10) {
+    return 'indigo';      // Rich color for extensive experience (10-14 years)
+  } else if (yearsInt >= 5) {
+    return 'blue';        // Medium color for intermediate experience (5-9 years)
+  } else if (yearsInt >= 3) {
+    return 'teal';        // Lighter color for some experience (3-4 years)
+  } else if (yearsInt >= 1) {
+    return 'emerald';     // Light color for beginner experience (1-2 years)
+  } else {
+    return 'gray';        // Neutral for minimal experience (<1 year)
+  }
+}
+  
+
+
 const SkillTag: React.FC<{ name: string; years: string }> = ({ name, years }) => (
-  <div className="bg-purple-100 text-purple-700 p-3 rounded-lg shadow hover:shadow-md transition-shadow duration-200">
+  <div className={`bg-${colorMap(years)}-100 text-${colorMap(years)}-700 p-3 rounded-lg shadow hover:shadow-md transition-shadow duration-200`}>
     <div className="flex items-center">
-      <span className="bg-purple-200 text-purple-700 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">C</span> {/* Placeholder icon/letter */}
+      <span className={`bg-${colorMap(years)}-200 text-${colorMap(years)}-700 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full`}>C</span> {/* Placeholder icon/letter */}
       <div>
         <p className="font-semibold text-sm">{name}</p>
         <p className="text-xs">{years}</p>
