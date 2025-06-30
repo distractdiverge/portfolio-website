@@ -16,6 +16,9 @@ const educationData = [
   },
 ];
 
+// TODO: Add icons for each skill
+// Icons: https://devicon.dev/
+
 const skillsData = {
   languagesAndFrameworks: [
     { name: 'UML', years: '17 years' },
@@ -106,7 +109,6 @@ const colorMapIcon = (years: string): string => {
   }
 }
   
-
 
 const SkillTag: React.FC<{ name: string; years: string }> = ({ name, years }) => {
   const colorClasses = colorMap(years);
