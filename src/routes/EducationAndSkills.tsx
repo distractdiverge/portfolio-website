@@ -6,11 +6,13 @@ const educationData = [
     degree: 'Masters of Science in Software Engineering',
     institution: 'Drexel, Philadelphia',
     year: '2017',
+    focus: 'Machine Learning and Artificial Intelligence'
   },
   {
     degree: 'Bachelors of Science in Computer Science',
     institution: 'Drexel, Philadelphia',
     year: '2008',
+    focus: 'Machine Learning and Artificial Intelligence'
   },
 ];
 
@@ -143,7 +145,7 @@ function EducationAndSkills() {
           <div className="bg-white bg-opacity-80 backdrop-filter backdrop-blur-sm p-8 md:p-10 rounded-lg inline-block max-w-2xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Education</h1>
             <p className="text-lg md:text-xl text-gray-700">
-              Subheading that sets up context, shares more info about the author, or generally gets people psyched to keep reading
+              An overview of my educational background and my technical skills.
             </p>
           </div>
         </div>
@@ -157,6 +159,7 @@ function EducationAndSkills() {
             {educationData.map((edu, index) => (
               <li key={index} className="text-lg text-gray-700 list-disc list-inside ml-4">
                 <span className="font-semibold">{edu.degree}</span> | {edu.institution} | {edu.year}
+                <p className="text-sm text-gray-600">Focus: {edu.focus}</p>
               </li>
             ))}
           </ul>
