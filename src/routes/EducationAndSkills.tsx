@@ -70,33 +70,58 @@ const colorMap = (years: string): string => {
   const yearsInt = yearsMatch ? parseInt(yearsMatch[0], 10) : 0;
 
   if (yearsInt >= 15) {
-    return 'purple';      // Deepest color for most experience (15+ years)
+    return 'bg-purple-100 text-purple-700';      // Deepest color for most experience (15+ years)
   } else if (yearsInt >= 10) {
-    return 'indigo';      // Rich color for extensive experience (10-14 years)
+    return 'bg-indigo-100 text-indigo-700';      // Rich color for extensive experience (10-14 years)
   } else if (yearsInt >= 5) {
-    return 'blue';        // Medium color for intermediate experience (5-9 years)
+    return 'bg-blue-100 text-blue-700';          // Medium color for intermediate experience (5-9 years)
   } else if (yearsInt >= 3) {
-    return 'teal';        // Lighter color for some experience (3-4 years)
+    return 'bg-teal-100 text-teal-700';          // Lighter color for some experience (3-4 years)
   } else if (yearsInt >= 1) {
-    return 'emerald';     // Light color for beginner experience (1-2 years)
+    return 'bg-emerald-100 text-emerald-700';    // Light color for beginner experience (1-2 years)
   } else {
-    return 'gray';        // Neutral for minimal experience (<1 year)
+    return 'bg-gray-100 text-gray-700';          // Neutral for minimal experience (<1 year)
+  }
+}
+
+const colorMapIcon = (years: string): string => {
+  // Extract the first number from the years string (e.g., "5 years" -> 5)
+  const yearsMatch = years.match(/\d+/);
+  const yearsInt = yearsMatch ? parseInt(yearsMatch[0], 10) : 0;
+
+  if (yearsInt >= 15) {
+    return 'bg-purple-200 text-purple-700';      // Deepest color for most experience (15+ years)
+  } else if (yearsInt >= 10) {
+    return 'bg-indigo-200 text-indigo-700';      // Rich color for extensive experience (10-14 years)
+  } else if (yearsInt >= 5) {
+    return 'bg-blue-200 text-blue-700';          // Medium color for intermediate experience (5-9 years)
+  } else if (yearsInt >= 3) {
+    return 'bg-teal-200 text-teal-700';          // Lighter color for some experience (3-4 years)
+  } else if (yearsInt >= 1) {
+    return 'bg-emerald-200 text-emerald-700';    // Light color for beginner experience (1-2 years)
+  } else {
+    return 'bg-gray-200 text-gray-700';          // Neutral for minimal experience (<1 year)
   }
 }
   
 
 
-const SkillTag: React.FC<{ name: string; years: string }> = ({ name, years }) => (
-  <div className={`bg-${colorMap(years)}-100 text-${colorMap(years)}-700 p-3 rounded-lg shadow hover:shadow-md transition-shadow duration-200`}>
-    <div className="flex items-center">
-      <span className={`bg-${colorMap(years)}-200 text-${colorMap(years)}-700 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full`}>C</span> {/* Placeholder icon/letter */}
+const SkillTag: React.FC<{ name: string; years: string }> = ({ name, years }) => {
+  const colorClasses = colorMap(years);
+  const iconClasses = colorMapIcon(years)
+  
+  return (
+    <div className={`${colorClasses} p-3 rounded-lg shadow hover:shadow-md transition-shadow duration-200`}>
+      <div className="flex items-center">
+        <span className={`${iconClasses} text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full`}>C</span> {/* Placeholder icon/letter */}
       <div>
         <p className="font-semibold text-sm">{name}</p>
         <p className="text-xs">{years}</p>
       </div>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 function EducationAndSkills() {
   useSeo({ 
