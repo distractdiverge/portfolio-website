@@ -145,7 +145,7 @@ function EducationAndSkills() {
           <div className="bg-white bg-opacity-80 backdrop-filter backdrop-blur-sm p-8 md:p-10 rounded-lg inline-block max-w-2xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Education</h1>
             <p className="text-lg md:text-xl text-gray-700">
-              An overview of my educational background and my technical skills.
+            From formal education to hands-on expertise, my journey in technology has been driven by a passion for continuous learning and innovation.
             </p>
           </div>
         </div>
