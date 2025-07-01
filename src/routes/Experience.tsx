@@ -109,7 +109,7 @@ function Experience() {
     <div className="py-10 px-5 max-w-4xl mx-auto text-gray-800">
       <h1 className="text-4xl md:text-5xl font-bold mb-4 text-center md:text-left">Experience</h1>
       <p className="text-lg md:text-xl text-gray-600 mb-12 text-center md:text-left">
-        Subheading that sets up context, shares more info about the author, or generally gets people psyched to keep reading
+        A collection of my professional experiences, showcasing my journey from intern to architect, and my current focus on software development and test automation.
       </p>
 
       <div className="space-y-10">
