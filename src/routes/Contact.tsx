@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import useSeo from '../hooks/useSeo.tsx';
-import userImage from '../assets/AllieLooktoFront.png';
+import userImage from '../assets/AllieLooktoFront.webp';
 
 function Contact() {
   useSeo({ 

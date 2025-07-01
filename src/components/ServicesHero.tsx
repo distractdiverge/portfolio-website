@@ -1,4 +1,4 @@
-import HeroImage from "../assets/ShadowForest.png";
+import HeroImage from "../assets/ShadowForest.webp";
 
 const Services = () => {
   const servicesData = [

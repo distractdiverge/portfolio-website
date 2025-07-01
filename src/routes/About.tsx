@@ -1,4 +1,4 @@
-import AboutHeroImage from '../assets/AllieLooktoSide.png';
+import AboutHeroImage from '../assets/AllieLooktoSide.webp';
 import ServicesHero from '../components/ServicesHero.tsx';
 import useSeo from '../hooks/useSeo.tsx';
 
