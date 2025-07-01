@@ -19,10 +19,66 @@ const educationData = [
 // TODO: Add icons for each skill
 // Icons: https://devicon.dev/
 
+// Devicon icon names mapping
+const deviconMap: Record<string, {name: string, version?: string}> = {
+  'UML': {name: 'unifiedmodelinglanguage', version: 'plain'},
+  'C#': {name: 'csharp', version: 'line'},
+  'Python': {name: 'python', version: 'original'},
+  '.NET': {name: 'dot-net', version: 'plain'},
+  'Javascript': {name: 'javascript', version: 'original'},
+  'NodeJS': {name: 'nodejs', version: 'original-wordmark'},
+  'jQuery': {name: 'jquery', version: 'plain'},
+  'Typescript': {name: 'typescript', version: 'original'},
+  'AngularJS': {name: 'angularjs', version: 'plain'},
+  'React': {name: 'react', version: 'original-wordmark'},
+  'Team City': {name: 'jetbrains', version: 'original'},
+  'NextJS': {name: 'nextjs', version: 'original-wordmark'},
+  'Bootstrap': {name: 'bootstrap', version: 'original'},
+  'LESS': {name: 'less', version: 'plain-wordmark'},
+  'SASS': {name: 'sass', version: 'original'},
+  'Java': {name: 'java', version: 'original-wordmark'},
+  'BackboneJS': {name: 'backbonejs', version: 'original' },
+  'Ruby': {name: 'ruby', version: 'original'},
+  'PHP': {name: 'php', version: 'plain'},
+  'Vite': {name: 'vite', version: 'original'},
+  'Figma': {name: 'figma', version: 'original'},
+  'Jenkins': {name: 'jenkins', version: 'original' },
+  'Confluence': {name: 'confluence', version: 'original' },
+  'Jira': {name: 'jira', version: 'original' },
+  'Bamboo': {name: 'bamboo', version: 'original' },
+  'Drupal': {name: 'drupal', version: 'original' },
+  'Wordpress': {name: 'wordpress', version: 'plain' },
+};
+
+// Icon component that renders Devicon SVG with fallback
+const DevIcon = ({ 
+  name, 
+  className = '' 
+}: { 
+  name: string; 
+  className?: string 
+}) => {
+  const icon = deviconMap[name] || null;
+  const iconName = icon ? icon.name : null;
+  const iconVersion = icon ? icon.version ? icon.version : 'original' : 'original';
+  const iconUrl = `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${iconName}/${iconName}-${iconVersion}.svg`;
+  
+  return iconName ? (
+    <img 
+      src={iconUrl} 
+      alt={name} 
+      className={`w-5 h-5 ${className}`}
+    />
+  ) : (
+    <div className="flex items-center justify-center w-5 h-5 rounded text-xs font-medium">
+      {name[0]}
+    </div>
+  );
+};
+
 const skillsData = {
   languagesAndFrameworks: [
     { name: 'UML', years: '17 years' },
-    
     { name: 'C#', years: '17 years' },
     { name: 'Python', years: '17 years' },
     { name: '.NET', years: '17 years' },
@@ -35,10 +91,10 @@ const skillsData = {
     { name: 'Team City', years: '7 years' },
     { name: 'Miro', years: '6 years' },
     { name: 'NextJS', years: '6 years' },
+    { name: 'Java', years: '6 years' },
     { name: 'Bootstrap', years: '5 years' },
     { name: 'LESS', years: '5 years' },
-    { name: 'SASS', years: '5 years' },
-    { name: 'Java', years: '6 years' },
+    { name: 'SASS', years: '5 years' },    
     { name: 'BackboneJS', years: '3 years' },
     { name: 'Ruby', years: '2 years' },
     { name: 'PHP', years: '2 years' },   
@@ -112,12 +168,14 @@ const colorMapIcon = (years: string): string => {
 
 const SkillTag: React.FC<{ name: string; years: string }> = ({ name, years }) => {
   const colorClasses = colorMap(years);
-  const iconClasses = colorMapIcon(years)
+  const iconClasses = colorMapIcon(years);
   
   return (
     <div className={`${colorClasses} p-3 rounded-lg shadow hover:shadow-md transition-shadow duration-200`}>
       <div className="flex items-center">
-        <span className={`${iconClasses} text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full`}>C</span> {/* Placeholder icon/letter */}
+        <span className={`${iconClasses} flex items-center justify-center w-6 h-6 rounded-full mr-2`}>
+          <DevIcon name={name} className={' '} />
+        </span>
       <div>
         <p className="font-semibold text-sm">{name}</p>
         <p className="text-xs">{years}</p>
