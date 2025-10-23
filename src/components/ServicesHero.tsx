@@ -24,12 +24,12 @@ const Services = () => {
       <div className="container mx-auto pr-4">
         <h2 className="text-1xl font-bold mb-6">What I Do</h2>
         
-        <div className="max-w-[37%] float-right ml-5 mb-5 md:float-left md:mr-8 ">
-            <img className="rounded-lg" src={HeroImage} />
+        <div className="max-w-[37%] float-right mb-5 md:float-left md:mr-8 ">
+            <img className="rounded-lg lg:max-w-[250px] xl:max-w-[300px] lg:mr-8" src={HeroImage} />
             <p className="text-gray-400 text-[0.67rem] pt-2">This is shadow, our resident dog and a very very good boy.</p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-2">
+        <div className="grid md:grid-cols-3 gap-2 pr-8">
           {servicesData.map((service, index) => (
             <div
               key={index}

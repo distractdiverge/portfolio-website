@@ -13,7 +13,7 @@ function App() {
       <div className="">
         <h1 className="text-3xl font-semibold pb-8">Rainbow Fern Consulting</h1>
         <div className="">
-          <img className="float-left mr-5 mb-5 w-[37%] md:w-[40%] md:float-right md:ml-8 rounded-lg" src={AboutHeroImage} />
+          <img className="float-left mr-5 mb-5 w-[37%] md:w-[40%] md:float-right md:ml-8 rounded-lg lg:max-w-[300px]" src={AboutHeroImage} />
           <p className="mb-5 text-sm">Hi! I&apos;m Astrid (I also go by Alex), founder of Rainbow Fern consulting.</p>
           <p className="mb-5 text-sm">I have worked in the software field for the last 15+ years working up the corp ladder from intern to architect.</p>
           <p className="mb-5 text-sm">Now, I am focusing on taking on remote projects, mentoring and helping develop amazing test automation suites.</p>

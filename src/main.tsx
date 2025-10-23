@@ -18,9 +18,9 @@ import { Routes, Route, BrowserRouter, useLocation } from 'react-router-dom'; //
 const GA_MEASUREMENT_ID = 'G-5H38H1LX1F'; // Your Measurement ID
 if (GA_MEASUREMENT_ID) {
   ReactGA.initialize(GA_MEASUREMENT_ID);
-  console.log('Google Analytics Initialized with ID:', GA_MEASUREMENT_ID);
+  // console.log('Google Analytics Initialized with ID:', GA_MEASUREMENT_ID);
 } else {
-  console.warn('Google Analytics Measurement ID is not set. Tracking will be disabled.');
+  // console.warn('Google Analytics Measurement ID is not set. Tracking will be disabled.');
 }
 
 // Component to track page views
@@ -58,7 +58,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
             
           </div>
           <div className="hidden md:block md:col-span-1"></div>
-          <div className="col-span-12">
+          <div className="col-span-12 max-width-mx">
             <FooterComponent />
           </div>
       </div>
