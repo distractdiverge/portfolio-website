@@ -101,8 +101,8 @@ const experiences: ExperienceItem[] = [
 
 function Experience() {
   useSeo({ 
-    title: 'Experience | Alex Lapinski',
-    description: 'Review the extensive professional experience of Alex Lapinski, from Principal Technical Staff at PayPal to Independent Contractor, showcasing a career in software engineering and architecture.' 
+    title: 'Career Experience | Astrid (Alex) Lapinski | Architect',
+    description: '15+ years as Principal Architect and engineer in regulated fintech and healthcare. Led enterprise architecture, system integrations, cross-team coordination.' 
   });
 
   return (

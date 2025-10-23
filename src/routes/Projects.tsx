@@ -4,8 +4,8 @@ import useSeo from '../hooks/useSeo.tsx';
 
 function Projects() {
   useSeo({ 
-    title: 'Projects | Alex Lapinski',
-    description: 'Explore a selection of recent projects by Alex Lapinski, including a portfolio website and an AI-powered offline research assistant. View details and links to the code.' 
+    title: 'Projects | Astrid (Alex) Lapinski | Software Architecture',
+    description: 'Architecture and integration implementations with accessible code. Enterprise systems, fintech solutions, AI/ML prototypes. Real-world projects from 15+ years.' 
   });
 
   const heroStyle = {

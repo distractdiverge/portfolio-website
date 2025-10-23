@@ -4,8 +4,8 @@ import userImage from '../assets/AllieLooktoFront.webp';
 
 function Contact() {
   useSeo({ 
-    title: 'Contact | Alex Lapinski',
-    description: 'Get in touch with Alex Lapinski to discuss potential projects, collaborations, or mentorship opportunities. Let\'s build something impactful together.' 
+    title: 'Hire Astrid (Alex) Lapinski | Architecture Consulting',
+    description: 'Available for architecture consulting, enterprise integration, and technical leadership projects. Remote services for Philadelphia Area and nationwide clients.' 
   });
 
   const [firstName, setFirstName] = useState('');
@@ -13,7 +13,7 @@ function Contact() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
-  const emailUser = 'alex.lapinski';
+  const emailUser = 'the.astrid.solveig';
   const emailDomain = 'gmail.com';
   const placeholderImageUrl = userImage; // Using imported image
 
@@ -35,7 +35,7 @@ function Contact() {
             Let's Build Something Impactful Together.
           </p>
           <p className="text-gray-700 leading-relaxed">
-          I am a seasoned software engineer and architect with 15 years of hands-on experience turning complex ideas into production systems that scale. From refactoring Swift Financial's lending platform for speed as developer #6 to steering its integration into PayPal. At PayPal I re-architected business-credit services, partnered with cybersecurity to catalog sensitive data, and launched PPP loan processing in just two weeks. I have repeatedly delivered in high-stakes, regulated domains. Along the way I've led distributed teams, mentored engineers from intern to principal, and presented architecture deep dives to audiences of 300+.</p>
+          I am a seasoned software engineer and architect with 15+ years of hands-on experience turning complex ideas into production systems that scale. From refactoring Swift Financial's lending platform for speed as developer #6 to steering its integration into PayPal. At PayPal I re-architected business-credit services, partnered with cybersecurity to catalog sensitive data, and launched PPP loan processing in just two weeks. I have repeatedly delivered in high-stakes, regulated domains. Along the way I've led distributed teams, mentored engineers from intern to principal, and presented architecture deep dives to audiences of 300+.</p>
           <p className="text-gray-700 leading-relaxed mt-4">
           Today I combine that depth with a tinkerer's curiosity for emerging tech; AI/ML, cloud-native data platforms, and privacy-preserving architectures. I consult on designing resilient micro-services, accelerating DevOps workflows, and integrating real-world data securely, while championing inclusive, growth-oriented team cultures. 
           </p>

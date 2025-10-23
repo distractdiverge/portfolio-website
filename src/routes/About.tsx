@@ -4,8 +4,8 @@ import useSeo from '../hooks/useSeo.tsx';
 
 function App() {
   useSeo({ 
-    title: 'Alex Lapinski | Software & Automation Consultant',
-    description: 'Welcome to the portfolio of Alex Lapinski. Specializing in software development, test automation, and project mentorship with over 18 years of experience.' 
+    title: 'Astrid (Alex) Lapinski | Software Architecture & Integration',
+    description: 'Remote software architect & consultant in Philadelphia Area. 15+ years in fintech/healthcare. Enterprise architecture, system integration, technical leadership.' 
   });
 
   return (
@@ -14,8 +14,8 @@ function App() {
         <h1 className="text-3xl font-semibold pb-8">Rainbow Fern Consulting</h1>
         <div className="">
           <img className="float-left mr-5 mb-5 w-[37%] md:w-[40%] md:float-right md:ml-8 rounded-lg" src={AboutHeroImage} />
-          <p className="mb-5 text-sm">Hi! I’m Alex, founder of Rainbow Fern consulting.</p>
-          <p className="mb-5 text-sm">I have worked in the software field for the last 18 years working up the corp ladder from intern to architect.</p>
+          <p className="mb-5 text-sm">Hi! I&apos;m Astrid (I also go by Alex), founder of Rainbow Fern consulting.</p>
+          <p className="mb-5 text-sm">I have worked in the software field for the last 15+ years working up the corp ladder from intern to architect.</p>
           <p className="mb-5 text-sm">Now, I am focusing on taking on remote projects, mentoring and helping develop amazing test automation suites.</p>
           <p className="pb-5 text-sm">Take a look below at some recent projects, or details on what I offer as services.</p>
           <p className="clear-left md:clear-right size-0">&nbsp;</p>
